@@ -1,26 +1,62 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+ 
+body{
+  font-family: "Quicksand";
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.color-text
+{
+  color: #EC6E55;
+  font-size: 20px;
+}
+/* 
+.marqueeScroll{
+    animation: marque1 30s infinite ease-in;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Add this to your globals.css */
+/* @keyframes marque1 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+} */ 
+
+
+
+ .marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.marqueeScroll {
+ width: 100%;
+  animation: marque1 20s linear infinite;
+}
+
+@keyframes marque1 {
+  0% {
+    transform: translateX(0%);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  100% {
+    transform: translateX(-50%);
+  }
+   
+ 
 }
